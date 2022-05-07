@@ -1,0 +1,36 @@
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.container table {
+  width: 100%;
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: #457b9d;
+  color: #fff;
+}
+
+th {
+  text-align: left;
+}
+
+thead th {
+  background-color: #1d3557;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 1em;
+}

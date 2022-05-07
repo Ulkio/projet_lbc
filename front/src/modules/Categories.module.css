@@ -1,0 +1,16 @@
+.selectCategory {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.selectCategory a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #a8dadc;
+  font-weight: bold;
+
+  background-color: #1d3557;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+}

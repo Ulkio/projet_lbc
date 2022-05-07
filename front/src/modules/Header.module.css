@@ -1,0 +1,38 @@
+header {
+  color: #a8dadc;
+  background-color: #1d3557;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  margin-bottom: 1em;
+}
+
+.title {
+  margin-left: 1em;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+.title a {
+  color: #a8dadc;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.actions {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-right: 1em;
+  padding-left: 1em;
+  border-left: #a8dadc solid 5px;
+}
+
+.actions a {
+  color: #a8dadc;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1em;
+}

@@ -1,0 +1,22 @@
+.form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.form input {
+  padding: 0.5em 0;
+}
+input[type="submit"] {
+  text-align: center;
+  width: 100px;
+  text-transform: uppercase;
+  color: #a8dadc;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #1d3557;
+  border: none;
+  border-radius: 10px;
+}

@@ -1,0 +1,9 @@
+.footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+.footer h6 {
+  color: #1d3557;
+}
