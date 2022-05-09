@@ -7,7 +7,7 @@ import AnnoncesByCategory from "./containers/AnnoncesByCategory";
 import Annonce from "./containers/Annonce";
 import AnnonceForm from "./components/AnnonceForm";
 import Admin from "./containers/Admin";
-
+import NotFound from "./components/NotFound";
 function App() {
   return (
     <>
@@ -19,8 +19,9 @@ function App() {
         <Route path="/nouvelle-annonce" element={<AnnonceForm />} />
         <Route path="/modifier-annonce/:id" element={<AnnonceForm />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

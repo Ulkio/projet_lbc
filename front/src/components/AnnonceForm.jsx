@@ -50,20 +50,28 @@ function AnnonceForm() {
 
   const handleSubmitPost = async (e) => {
     e.preventDefault();
-    // const data = new FormData();
-    // data.append("file", image);
-    // data.append("fileName", image.name);
-    // try {
-    //   await postImage(data);
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    const data = new FormData();
+    data.append("file", image);
+    data.append("fileName", image.name);
+    try {
+      await postImage(data);
+    } catch (error) {
+      console.log(error);
+    }
     await postAnnonce(formData);
     navigate("/");
   };
 
   const handleSubmitEdit = async (e) => {
     e.preventDefault();
+    const data = new FormData();
+    data.append("file", image);
+    data.append("fileName", image.name);
+    try {
+      await postImage(data);
+    } catch (error) {
+      console.log(error);
+    }
     await editAnnonce(formData, id);
     navigate("/admin");
   };

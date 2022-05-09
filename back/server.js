@@ -11,6 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname + "/public")));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -23,6 +24,7 @@ app.all("*", function (req, res, next) {
 });
 
 app.use(router);
+
 app.listen(PORT, () => {
   console.log(`Listening to http://localhost:${PORT}`);
 });

@@ -56,15 +56,11 @@ export const getAnnoncesByCategory = async (req, res, next) => {
 };
 
 export const addAnnonce = async (req, res, next) => {
-  const datas = {
-    title: req.body.title,
-    description: req.body.description,
-    image: req.body.image,
-    type: req.body.type,
-    price: req.body.price,
-    idCategory: req.body.idCategory,
-    idUser: req.body.idUser,
-  };
+  const datas = {};
+  for (const key in req.body) {
+    datas[key] = req.body[key];
+  }
+
   const query = `INSERT INTO annonce
       (title,description,image,creation_date,type,price,id_category,id_user)
       VALUES
@@ -84,16 +80,13 @@ export const addAnnonce = async (req, res, next) => {
 };
 
 export const updateAnnonce = async (req, res, next) => {
-  const datas = {
-    title: req.body.title,
-    description: req.body.description,
-    image: req.body.image,
-    type: req.body.type,
-    price: req.body.price,
-    idCategory: req.body.idCategory,
-    idUser: req.body.idUser,
-    id: req.params.id,
-  };
+  const datas = {};
+
+  for (const key in req.body) {
+    datas[key] = req.body[key];
+  }
+  datas.id = req.params.id;
+
   const query = `UPDATE annonce
     SET title = ?, description = ?, image = ?, type = ?, price = ?, update_date = NOW(), id_category = ?, id_user = ?
     WHERE id_annonce = ?`;
